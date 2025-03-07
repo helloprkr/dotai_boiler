@@ -69,6 +69,16 @@ Blueprints are comprehensive guides for implementing specific technical architec
 - [supabase-drizzle-actions.md](blueprints/supabase-drizzle-actions.md): Backend architecture with Supabase, Drizzle ORM, and Server Actions
 - [flux-with-replicate.md](blueprints/flux-with-replicate.md): Image generation using Flux and Replicate
 
+### Model Context Protocol (MCP) Blueprints
+
+The following blueprints provide MCP rules for optimizing AI interactions with different technologies:
+
+- [mcp-overview.md](blueprints/mcp-overview.md): Overview and core concepts of the Model Context Protocol
+- [cursor-mcp-rules.md](blueprints/cursor-mcp-rules.md): MCP rules for optimizing Cursor editor with Go, Dagger, and Docker
+- [go-mcp-rules.md](blueprints/go-mcp-rules.md): MCP rules for Go language patterns and best practices
+- [dagger-mcp-rules.md](blueprints/dagger-mcp-rules.md): MCP rules for Dagger CI/CD and container workflows
+- [docker-mcp-rules.md](blueprints/docker-mcp-rules.md): MCP rules for Docker containerization best practices
+
 ## Libraries
 
 - [lib](lib): Contains documentation examples for library usage
