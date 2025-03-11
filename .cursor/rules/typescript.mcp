@@ -1,0 +1,190 @@
+// TypeScript MCP Rules
+// These rules define patterns and best practices for TypeScript development
+
+@context typescript {
+  description: "TypeScript development context",
+  scope: [".ts", ".tsx"],
+}
+
+// Function Patterns
+
+@rule typescript_function_naming {
+  context: "TypeScript function naming conventions",
+  pattern: "function camelCaseName() { ... }",
+  explanation: "Functions should use camelCase naming convention"
+}
+
+@rule typescript_async_function {
+  context: "Asynchronous function pattern",
+  pattern: "async function name() { const result = await promise; }",
+  explanation: "Use async/await for asynchronous operations"
+}
+
+@rule typescript_arrow_function {
+  context: "Arrow function pattern",
+  pattern: "const name = () => { ... }",
+  explanation: "Use arrow functions for anonymous functions and to preserve 'this' context"
+}
+
+// Type Definitions
+
+@rule typescript_interface {
+  context: "Interface definition pattern",
+  pattern: "interface Name { property: Type; }",
+  explanation: "Use interfaces to define object shapes with PascalCase naming"
+}
+
+@rule typescript_type_alias {
+  context: "Type alias pattern",
+  pattern: "type Name = BaseType | OtherType;",
+  explanation: "Use type aliases for unions, intersections, or complex types"
+}
+
+@rule typescript_enum {
+  context: "Enum definition pattern",
+  pattern: "enum Name { Key = value }",
+  explanation: "Use enums for sets of related constants with PascalCase naming"
+}
+
+// Component Patterns
+
+@rule typescript_react_function_component {
+  context: "React functional component with TypeScript",
+  pattern: "function ComponentName({ prop }: Props) { return <div>{prop}</div>; }",
+  explanation: "Use functional components with explicit Props interface"
+}
+
+@rule typescript_react_props_interface {
+  context: "React component props interface",
+  pattern: "interface ComponentProps { required: string; optional?: number; }",
+  explanation: "Define props interface with required and optional properties"
+}
+
+@rule typescript_react_event_handler {
+  context: "React event handler typing",
+  pattern: "const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => { ... }",
+  explanation: "Use specific event types for event handlers"
+}
+
+// Error Handling
+
+@rule typescript_error_handling {
+  context: "Error handling in TypeScript",
+  pattern: "try { await riskyOperation(); } catch (error) { if (error instanceof Error) { ... } }",
+  explanation: "Use try/catch with type checking for error handling"
+}
+
+@rule typescript_async_error_handling {
+  context: "Error handling in async functions",
+  pattern: "try { await asyncFunction(); } catch (error) { handleError(error); }",
+  explanation: "Use try/catch blocks for handling errors in async operations"
+}
+
+// Utility Patterns
+
+@rule typescript_non_null_assertion {
+  context: "Non-null assertion usage",
+  pattern: "const value = nullableValue!;",
+  explanation: "Use non-null assertion operator when you're certain a value is not null/undefined"
+}
+
+@rule typescript_optional_chaining {
+  context: "Optional chaining usage",
+  pattern: "const value = obj?.property?.nestedProperty;",
+  explanation: "Use optional chaining for safely accessing nested properties"
+}
+
+@rule typescript_nullish_coalescing {
+  context: "Nullish coalescing usage",
+  pattern: "const value = nullableValue ?? defaultValue;",
+  explanation: "Use nullish coalescing for providing default values for null/undefined"
+}
+
+// Import/Export Patterns
+
+@rule typescript_named_exports {
+  context: "Named exports pattern",
+  pattern: "export { name1, name2 };",
+  explanation: "Use named exports for multiple exports from a module"
+}
+
+@rule typescript_default_export {
+  context: "Default export pattern",
+  pattern: "export default function Name() { ... }",
+  explanation: "Use default exports for the primary export of a module"
+}
+
+@rule typescript_type_import {
+  context: "Type-only import",
+  pattern: "import type { TypeName } from './module';",
+  explanation: "Use type-only imports for importing types without runtime code"
+}
+
+// Configuration Patterns
+
+@rule typescript_config_strict {
+  context: "TypeScript configuration strict mode",
+  pattern: "{ \"compilerOptions\": { \"strict\": true } }",
+  explanation: "Enable strict mode in tsconfig.json for stronger type safety"
+}
+
+@rule typescript_paths_alias {
+  context: "Path aliases in TypeScript",
+  pattern: "{ \"compilerOptions\": { \"paths\": { \"@/*\": [\"./src/*\"] } } }",
+  explanation: "Use path aliases for cleaner imports in large projects"
+}
+
+// Group related rules with tags
+
+@tag function_patterns {
+  description: "Function-related TypeScript patterns",
+  rules: [
+    typescript_function_naming,
+    typescript_async_function,
+    typescript_arrow_function
+  ]
+}
+
+@tag type_patterns {
+  description: "Type definition patterns in TypeScript",
+  rules: [
+    typescript_interface,
+    typescript_type_alias,
+    typescript_enum
+  ]
+}
+
+@tag react_patterns {
+  description: "React-specific TypeScript patterns",
+  rules: [
+    typescript_react_function_component,
+    typescript_react_props_interface,
+    typescript_react_event_handler
+  ]
+}
+
+@tag error_handling {
+  description: "Error handling patterns in TypeScript",
+  rules: [
+    typescript_error_handling,
+    typescript_async_error_handling
+  ]
+}
+
+@tag utility_operators {
+  description: "TypeScript utility operators",
+  rules: [
+    typescript_non_null_assertion,
+    typescript_optional_chaining,
+    typescript_nullish_coalescing
+  ]
+}
+
+@tag module_patterns {
+  description: "Module import/export patterns",
+  rules: [
+    typescript_named_exports,
+    typescript_default_export,
+    typescript_type_import
+  ]
+}
