@@ -51,7 +51,7 @@ DotAI Boiler transforms your development workflow by creating a structured knowl
 ## ✨ Features
 
 - **💡 AI Codex System**: Repository of learnings and errors to improve code quality over time
-- **🤝 AI Assistant Integration**: Seamless workflow with AI coding assistants like GitHub Copilot, Claude, and ChatGPT
+- **🤝 AI Assistant Integration**: Seamless workflow with Ai/LLMs like GitHub Copilot, Claude, and ChatGPT
 - **💾 Session Management**: Maintain project context across multiple interactions with persistent memory
 - **🗺️ Blueprints**: Comprehensive guides for implementing specific technical architectures
 - **📝 Snippets**: Code templates for consistent implementation patterns across your project
