@@ -1,4 +1,4 @@
-# �� DotAI Boiler
+# 🧿 DotAI Boiler
 
 <div align="center">
 
